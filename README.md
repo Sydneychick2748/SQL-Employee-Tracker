@@ -4,7 +4,7 @@
 ## Description
 
 I want to view and manage my company's departments, roles, and employees to organize and plan my business.
-This application is a backend solution for managing a company's employees using: "the console.table": "^0.10.0" "dotenv": "^16.0.3", "inquirer": "^8.2.4"  "mysql2": "^2.3.3".The interface functions as a Content Management System for non-developers to easily view and interact with information stored in the   database from the terminal. As a business owner,
+This application is a backend solution for managing a company's employees using: "the console.table": "^0.10.0" "dotenv": "^16.0.3", "inquirer": "^8.2.4" , "chalk": "^5.2.0", "mysql2": "^2.3.3".The interface functions as a Content Management System for non-developers to easily view and interact with information stored in the   database from the terminal. As a business owner,
 
 
 ## Table of Contents (Optional)
@@ -17,8 +17,8 @@ This application is a backend solution for managing a company's employees using:
 
 ## Installation
 
-Make a new reop in the git hub and colon the repo in the terminal open vs code and create your working environment:
-db folder - scehema.sql and seeds.sql
+Make a new repo in the git hub and colon the repo in the terminal open vs code and create your working environment:
+db folder - schema.sql and seeds.sql
 
 server.js file 
 
@@ -33,7 +33,7 @@ package-lock.json
 package.json
 
 To set up the environment in the terminal you will need the following:
-npm init -y to create a package.son file to store your dependenices.
+npm init -y to create a package.son file to store your dependencies.
 
 npm i inquirer to interact with the user via the command-line.
 
@@ -68,14 +68,18 @@ WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
 
 The database schema as shown in the following image:
+
+
+
 <img width="567" alt="image" src="https://user-images.githubusercontent.com/87034052/208741092-ffcfee70-9c69-4d91-953d-d8470375b938.png">
 
-    ![alt text](assets/images/screenshot.png)
+  
+  Here is also  a video link to see how the project runs:
 
 
 ## License
 
-There is no licence on this project 
+There is no license on this project  
 ---
 
 ## Contribute
