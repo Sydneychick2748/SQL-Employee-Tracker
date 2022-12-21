@@ -84,7 +84,7 @@ There is no license on this project
 
 ## Contribute
 
-If  you would like to contribute to this project, please go to my GitHub at :
+If  you would like to contribute to this project, please go to my GitHub at : https://github.com/Sydneychick2748/SQL-Employee-Tracker
 
 ## Questions
 If you have any questions about this project, please contact me at anabennett77@gmail.com 
