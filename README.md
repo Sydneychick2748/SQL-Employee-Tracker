@@ -4,7 +4,7 @@
 ## Description
 
 I want to view and manage my company's departments, roles, and employees to organize and plan my business.
-This application is a backend solution for managing a company's employees using: "the console.table": "^0.10.0" "dotenv": "^16.0.3", "inquirer": "^8.2.4" , "chalk": "^5.2.0", "mysql2": "^2.3.3".The interface functions as a Content Management System for non-developers to easily view and interact with information stored in the   database from the terminal. As a business owner,
+This application is a backend solution for managing a company's employees using: "the console.table": "^0.10.0" "dotenv": "^16.0.3", "inquirer": "^8.2.4" ,   "chalk": "^4.1.2", "mysql2": "^2.3.3".The interface functions as a Content Management System for non-developers to easily view and interact with information stored in the   database from the terminal. As a business owner,
 
 
 ## Table of Contents (Optional)
