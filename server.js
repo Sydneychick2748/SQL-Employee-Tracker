@@ -119,7 +119,7 @@ const viewAllEmployees = () => {
   );
 };
 
-//
+//  this is the function that will add a department to the database
 const addADepartment = () => {
   inquirer
     .prompt([
