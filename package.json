@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/Sydneychick2748/SQL-Employee-Tracker#readme",
   "dependencies": {
-    "chalk": "^5.2.0",
+    "chalk": "^4.1.2",
     "console.table": "^0.10.0",
     "dotenv": "^16.0.3",
     "inquirer": "^8.2.4",

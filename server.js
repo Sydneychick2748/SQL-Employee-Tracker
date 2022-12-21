@@ -1,9 +1,11 @@
 const inquirer = require("inquirer");
 const mysql = require("mysql2");
-const cTable = require("console.table");
+
 require("dotenv").config();
-//  const { prompt } = require('inquirer');
-// this connects mysql to the data base
+const chalk = require("chalk");
+
+console.log(chalk.blue("Hello world!"));
+
 const connection = mysql.createConnection(
   {
     host: "localhost",
@@ -16,21 +18,20 @@ const connection = mysql.createConnection(
 
 //connection to the database
 console.log(
-  chalk.yellow.bold(
+  chalk.blue.bold(
     "======================================================================================================="
   )
 );
 console.log(``);
-console.log(chalk.red.bold(figlet.textSync("EMPLOYEE TRACKER")));
+console.log(
+  chalk.blue.bgRed.bold("Welcome to the employee management program!")
+);
 console.log(``);
 console.log(
-  chalk.green.bold(
+  chalk.blue.bold(
     `======================================================================================================`
   )
 );
-
-// console.log(chalk.yellow.bold("Welcome to the employee management program!"));
-// menuPrompts();
 
 //this starts the program
 const menuPrompts = () => {
@@ -49,10 +50,6 @@ const menuPrompts = () => {
           "add a role",
           "add an employee",
           "update an employee role",
-          chalk.red(),
-          chalk.red(),
-          chalk.red(),
-          chalk.red(),
           "exit menu",
         ],
       },
@@ -60,29 +57,29 @@ const menuPrompts = () => {
     ])
     .then((res) => {
       switch (res.choiceList) {
-        case "View all departments":
+        case "view all departments":
           viewAllDepartments();
           break;
-        case "View all roles":
+        case "view all roles":
           viewAllRoles();
           break;
-        case "View all employees":
+        case "view all employees":
           viewAllEmployees();
           break;
 
-        case "Add a department":
+        case "add a department":
           addADepartment();
           break;
-        case "Add a role":
+        case "add a role":
           addARole();
           break;
-        case "Add an employee":
+        case "add an employee":
           addAnEmployee();
           break;
-        case "Update employee role":
+        case "update an employee role":
           updateEmployeeRole();
           break;
-        case "Exit program":
+        case "exit menu":
           exitProgram();
           break;
       }
@@ -91,14 +88,11 @@ const menuPrompts = () => {
 
 //this is the function that will start the program
 const viewAllDepartments = () => {
-  connection.query(
-    `SELECT department.name AS department, employees.first_name, employees.last_name FROM employees LEFT JOIN role ON employees.role_id = role.id LEFT JOIN department ON role.department_id = department.id ORDER BY department.id`,
-    (err, res) => {
-      if (err) throw err;
-      cTable(res);
-      menuPrompts();
-    }
-  );
+  connection.query(`SELECT * FROM department`, (err, res) => {
+    if (err) throw err;
+    console.table(res);
+    menuPrompts();
+  });
 };
 
 //  this is the function that will view all roles
@@ -107,7 +101,7 @@ const viewAllRoles = () => {
     `SELECT role.title, role.salary, department.name AS department FROM role LEFT JOIN department ON role.department_id = department.id`,
     (err, res) => {
       if (err) throw err;
-      cTable(res);
+      console.table(res);
       menuPrompts();
     }
   );

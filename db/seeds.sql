@@ -28,15 +28,15 @@ VALUES
 
 
 
-INSERT INTO employee
+INSERT INTO employees
 (first_name, last_name, role_id, manager_id)
 
 VALUES
-('Conrad', 'Keynes', 1, 2),
+('Conrad', 'Keynes', 1, null),
 ('Nikita', 'Lee', 2, 1),
-('Gia', 'Venter', 3, 4),
+('Gia', 'Venter', 3, 1),
 ('Marcelo', 'Barca', 4, 3),
-('Ben', 'Bingham', 5, 6),
+('Ben', 'Bingham', 5, 3),
 ('Shari', 'Espinoza', 6, 5),
-('Wayland', 'Charles', 7, 8),
-('Rose', 'Calcar', 8, 7);
+('Wayland', 'Charles', 7, 5),
+('Rose', 'Calcar', 7, 7);

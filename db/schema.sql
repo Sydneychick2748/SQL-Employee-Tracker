@@ -29,7 +29,7 @@ CREATE TABLE role (
 
 );
 
-CREATE TABLE employee (
+CREATE TABLE employees (
 
   id INT NOT NULL AUTO_INCREMENT,
  
@@ -40,9 +40,9 @@ CREATE TABLE employee (
   role_id INT NOT NULL,
   FOREIGN KEY (role_id) REFERENCES role(id),
   
-  manager_id INT NOT NULL, 
+  manager_id INT, 
 
-  FOREIGN KEY (manager_id) REFERENCES role(id),
+  FOREIGN KEY (manager_id) REFERENCES employees(id),
   PRIMARY KEY (id)
 
 
